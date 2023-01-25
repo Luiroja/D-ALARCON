@@ -25,20 +25,21 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "SHIRT STYLE!",
+      img: "https://cdn0.matrimonio.com.pe/article-vendor/6637/original/1280/jpg/tortas-flores-naturales-drip-blanco-1_11_146637-165144860093053.jpeg",
+      title: "TORTAS",
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
+      img: "https://gullon.es/wp-content/uploads/recetas-de-postres-sin-azucar.jpg",
+      title: "POSTRES",
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
+      img: "https://asuparty.pe/wp-content/uploads/2022/05/PACK-4.jpg",
+      title: "BOCADITOS",
     },
   ];
+  
 
   export const popularProducts = [
     {

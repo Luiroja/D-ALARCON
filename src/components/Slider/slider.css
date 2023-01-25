@@ -84,18 +84,18 @@
     flex-wrap: wrap;
 }
 
-h1 {
+.h1Slider {
     font: size 70px;
 }
 
-p {
+.pSlider {
     margin: 50px;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 3px;
     text-align: center;
 }
-button {
+.buttonSlider {
     padding: 10px;
     font-size: 20px;
     background-color: transparent;

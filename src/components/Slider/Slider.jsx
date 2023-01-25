@@ -42,15 +42,15 @@ const Slider = ({items}) => {
                     </div>
                     <div className="infoContainer">
                         {index === current && (
-                            <h1>{item.title}</h1>
+                            <h1 className='h1Slider'>{item.title}</h1>
                             
                         )}
                         {index  === current && (
-                            <p>{item.desc}</p>
+                            <p className='pSlider'>{item.desc}</p>
                         )}
 
                         {index === current && (
-                            <button>SHOW NOW</button>
+                            <button className='buttonSlider'>SHOW NOW</button>
                         )}
                         
 

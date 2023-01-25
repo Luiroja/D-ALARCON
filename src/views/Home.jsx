@@ -4,6 +4,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Slider from '../components/Slider/Slider'
+import Categories from '../components/Categories'
 import { sliderItems } from '../Data'
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
     <div>
         <Navbar/>
         <Slider items={sliderItems}/>
+        <Categories/>
     </div>
   )
 }

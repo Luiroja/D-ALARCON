@@ -1,9 +1,10 @@
-.container {
+.container-navbar {
+
     height: 60px;
     
 }
 
-.wrapper {
+.wrapper-navbar {
     padding: 10px 20px;
     display: flex;
     align-items: center;

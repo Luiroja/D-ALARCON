@@ -6,8 +6,8 @@ import { FiSearch, FiShoppingCart } from 'react-icons/fi';
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <div className="wrapper">
+    <div className="container-navbar">
+      <div className="wrapper-navbar">
       <div className='left'>
         <div className='searchContainer'>
           <input placeholder="Buscar"/>

@@ -1,7 +1,5 @@
 .containerCategories {
     display: flex;
-    
-    padding: 20px;
     justify-content: space-between;
 }
 .containerCategory {
@@ -33,7 +31,7 @@
 }
 
 .h1Category {
-    color: white;
+    color: black;
     margin-bottom: 20px;
 
 }
@@ -42,7 +40,7 @@
     border:none;
     padding: 10px;
     background-color: white;
-    color:gray;
+    color:rgb(0, 0, 0);
     cursor: pointer;
     font-weight: 600;
 }

@@ -37,7 +37,7 @@ const Slider = ({items}) => {
                     <div className="imgContainer">
                         {/* ADD IMG HERE*/}
                         {index === current && (
-                            <img src={item.img} alt="" className='img-slider'/> 
+                            <img src={item.img} alt="" className='imgSlider'/> 
                         )}     
                     </div>
                     <div className="infoContainer">

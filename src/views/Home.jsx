@@ -2,10 +2,13 @@
 // comand to create class funcion: "rfc"
 
 import React from 'react'
+import { sliderItems } from '../Data'
+
 import Navbar from '../components/Navbar/Navbar'
 import Slider from '../components/Slider/Slider'
 import Categories from '../components/Categories'
-import { sliderItems } from '../Data'
+import Products from '../components/Products/Products'
+
 
 const Home = () => {
   return (
@@ -13,6 +16,7 @@ const Home = () => {
         <Navbar/>
         <Slider items={sliderItems}/>
         <Categories/>
+        <Products/>
     </div>
   )
 }

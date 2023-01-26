@@ -1,6 +1,5 @@
 .container-navbar {
-
-    height: 60px;
+    height: 100px;
     
 }
 
@@ -29,6 +28,7 @@
 input {
     border: none;
     height: 24px;
+    background-color: none;
 }
 
 .center {

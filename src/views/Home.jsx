@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Slider from '../components/Slider/Slider'
 import Categories from '../components/Categories'
 import Products from '../components/Products/Products'
+import Footer from '../components/Footer/Footer'
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
         <Slider items={sliderItems}/>
         <Categories/>
         <Products/>
+        <Footer/>
     </div>
   )
 }

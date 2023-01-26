@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #f5fbfd;
 }
 
 .containerProduct {
@@ -13,7 +14,6 @@ flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfd;
   position: relative;
 
 }
@@ -37,6 +37,7 @@ flex: 1;
 
 .infoProduct:hover {
     opacity: 1;
+    border-radius: 20px;
 }
 
 .imgProduct {

@@ -1,10 +1,10 @@
 import './App.css';
-import  Home from './views/Home'
  import React from 'react'
+import Login from "./views/Login/Login"
  
  const App = () => {
    return (
-     <Home/>
+     <Login/>
    )
  }
  

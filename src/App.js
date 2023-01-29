@@ -1,10 +1,10 @@
 import './App.css';
  import React from 'react'
-import Login from "./views/Login/Login"
+import Cart from "./views/Cart/Cart"
  
  const App = () => {
    return (
-     <Login/>
+     <Cart/>
    )
  }
  

@@ -21,9 +21,9 @@ function Product() {
 
                 <div className="addProductView">
                     <div className="amountContainer">
-                        <MdAdd/>
+                        <MdAdd style={{"padding":"10px"}}/>
                         <h3 className="amount">1</h3>
-                        <MdRemove/>
+                        <MdRemove style={{"padding":"10px"}}/>
                     </div>
                     <button className="buttonProductView">Comprar</button>
                 </div>

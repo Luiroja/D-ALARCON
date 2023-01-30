@@ -6,7 +6,7 @@ function CategoryItem({item}) {
     <div className="containerCategory">
        <img src={item.img} alt="" className='imgCategory'/>
        <div className="infoCategory">
-        <h1 className="h1Category">{item.title}</h1>
+        <h1 className="titleCategory">{item.title}</h1>
         <button className='buttonCategory'>SHOW NOW</button>
        </div>
     </div>

@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="wrapper-navbar">
       <div className='left'>
         <div className='searchContainer'>
-          <input placeholder="Buscar"/>
+          <input placeholder="Buscar" className="inputSearch"/>
         {/* add search button of font-awesome */}
         <FiSearch style={{ color: "gray", fontSize: 24 }} />
         </div>

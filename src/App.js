@@ -1,10 +1,10 @@
 import './App.css';
  import React from 'react'
-import Cart from "./views/Cart/Cart"
+import Product from "./views/Product/Product"
  
  const App = () => {
    return (
-     <Cart/>
+     <Product/>
    )
  }
  

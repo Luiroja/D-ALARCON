@@ -16,14 +16,14 @@
 }
 
 .containerCategory:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
     cursor: pointer;
     border-radius: 20px;
 }
 .imgCategory {
     border-radius: 50%;
     width: 70%;
-    height: 70%;
+    height: 60%;
     object-fit: cover;
     background-color: gray;
 }
@@ -40,7 +40,7 @@
     justify-content: center;
 }
 
-.h1Category {
+.titleCategory {
     color: black;
     margin-bottom: 20px;
 
@@ -53,4 +53,32 @@
     color:rgb(0, 0, 0);
     cursor: pointer;
     font-weight: 600;
+}
+/* Breackpoint to mobile view*/
+
+@media only screen and (max-width: 600px) {
+    .containerCategories {
+        margin-top: 50px;
+        padding: 10px;
+        flex-direction: column;
+        
+    }
+    .containerCategory {
+        
+        height: 150px;
+        width: 70%;
+        margin: 10px auto;
+    }
+    .imgCategory {
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    .titleCategory {
+        font-size: 24px;
+    }
+
+    .buttonCategory {
+        font-size: 12px;
+    }
 }

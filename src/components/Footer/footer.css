@@ -11,6 +11,11 @@
     align-items: center;
     flex-direction: column;
 }
+.logoFooter {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
 
 .desc {
     margin: 20px;
@@ -59,4 +64,21 @@
     margin-top: 20px;
 }
 
-
+@media only screen and (max-width: 600px) {
+    .containerFooter {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .logoFooter {
+        margin:20px;
+    }
+    .footerCenter {
+        display: none;
+    }
+    .footerRight {
+        background-color: aquamarine;
+        width: 100%;
+    }
+ 
+}

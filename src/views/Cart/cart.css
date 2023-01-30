@@ -38,6 +38,7 @@
 .productCart {
     display: flex;
     justify-content: space-between;
+    margin: 20px;
 }
 
 .productCartDetail {
@@ -46,7 +47,10 @@
 }
 
 .imgCart {
-    width: 200px;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    margin-left: 20px;
 }
 .detailsProduct {
     padding: 20px;
@@ -110,3 +114,34 @@ hr {
     color: white;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 600px) {
+    .wrapperCart {
+        padding: 10px;
+    }
+    .topText {
+        display: none;
+    }
+    .topButtonCart {
+        margin: 10px;
+    }
+    
+    .bottomCart {
+        flex-direction: column;
+    }
+    .productCart {
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgCart {
+        border-radius: 10px;
+
+    }
+    .priceAmountCart {
+        margin: 5px 15px;
+    }
+    .productPriceCart {
+        margin-bottom: 20px;
+    }
+}
+

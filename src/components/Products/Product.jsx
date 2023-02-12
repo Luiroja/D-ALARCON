@@ -3,7 +3,7 @@ import { FiShoppingCart, FiSearch } from 'react-icons/fi'
 import {GrFavorite} from 'react-icons/gr'
 import "./products.css"
 
-function Product({item}) {
+const Product =({item}) => {
   return (
     <div className="containerProduct">
         <img className="imgProduct" src={item.img}/>

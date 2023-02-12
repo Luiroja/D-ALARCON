@@ -27,16 +27,19 @@ export const sliderItems = [
       id: 1,
       img: "https://cdn0.matrimonio.com.pe/article-vendor/6637/original/1280/jpg/tortas-flores-naturales-drip-blanco-1_11_146637-165144860093053.jpeg",
       title: "TORTAS",
+      category: "tortas"
     },
     {
       id: 2,
       img: "https://gullon.es/wp-content/uploads/recetas-de-postres-sin-azucar.jpg",
       title: "POSTRES",
+      category: "postres"
     },
     {
       id: 3,
       img: "https://asuparty.pe/wp-content/uploads/2022/05/PACK-4.jpg",
       title: "BOCADITOS",
+      category: "bocaditos"
     },
   ];
   

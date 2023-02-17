@@ -59,20 +59,20 @@
 
 @media only screen and (max-width: 600px) {
     .containerCategories {
+        margin-top: 20px;
         flex-direction: column;
         height: 70%;
         
     }
     .containerCategory {
-        
         height: 90%;
         width: 90%;
-        margin: 10px auto;
+        margin: 20px auto;
     }
     .imgCategory {
-        border-radius: 50px;
-        width: 200px;
-        height: 200px;
+        border-radius: 10px;
+        width: 280px;
+        height: 300px;
     }
     .titleCategory {
         font-size: 24px;

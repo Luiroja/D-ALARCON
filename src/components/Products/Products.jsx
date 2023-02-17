@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { popularProducts } from '../../Data'
 import Product from './Product'
 import axios from "axios"
+import "./products.css"
 
 
 const Products = ({category, filters}) => {
@@ -39,6 +40,7 @@ const Products = ({category, filters}) => {
 
 
   return (
+    
     <div className="containerProducts">
       {category ?
         filteredProducts.map((item) => <Product item={item} key={item.id}/>)

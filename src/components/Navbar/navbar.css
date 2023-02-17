@@ -68,6 +68,7 @@ h1 {
 @media only screen and (max-width: 600px) {
     .container-navbar {
         height: 50px;
+        width: 100vw;
     }
     .wrapper-navbar {
         padding: 10px 0;
@@ -78,7 +79,7 @@ h1 {
     .right {
         flex: 2;
         justify-content: center;
-        margin-right: 10px;
+        margin-right: 20px;
     }
     .menuItem {
         font-size: 12px;

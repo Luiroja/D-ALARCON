@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className='center'>
-        <img className="logoNavbar" src="https://scontent.fpiu2-1.fna.fbcdn.net/v/t39.30808-6/322470245_887765815695149_2413674355644111238_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEvQ64A2qChdSC7uExTJZqppE5JGcqdXgGkTkkZyp1eAeyyIAnvi_YL8gDbd0gIj1tUKjebgpaHUS2DIw34gD5l&_nc_ohc=9RQx1BI7yF0AX_kyn_c&_nc_ht=scontent.fpiu2-1.fna&oh=00_AfBTpqWdy5_Ymt7C5P7KCCZcFIna8u8Onx7YLALe0zUPkA&oe=63DAC41B" alt="" />
+        <img className="logoNavbar" src="https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/322470245_887765815695149_2413674355644111238_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEvQ64A2qChdSC7uExTJZqppE5JGcqdXgGkTkkZyp1eAeyyIAnvi_YL8gDbd0gIj1tUKjebgpaHUS2DIw34gD5l&_nc_ohc=Fnb2LZDSy6YAX9Du0PH&_nc_ht=scontent-lim1-1.xx&oh=00_AfC76LAgJqK5XTcYmMZLkoYNAfBgoZ1GmgnhpWS_jHmFGw&oe=63F084DB" alt="" />
         </div>
       <div className='right'>
         <div className='menuItem'>REGISTER</div>

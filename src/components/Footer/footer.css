@@ -72,13 +72,15 @@
     }
     .logoFooter {
         margin:20px;
+        width: 150px;
+        height: 150px;
     }
     .footerCenter {
         display: none;
     }
     .footerRight {
         background-color: aquamarine;
-        width: 100%;
+        width: 100vw;
     }
  
 }

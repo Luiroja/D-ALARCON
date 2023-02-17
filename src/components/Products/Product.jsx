@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { FiShoppingCart, FiSearch } from 'react-icons/fi'
 import {GrFavorite} from 'react-icons/gr'
 import "./products.css"
@@ -9,11 +10,10 @@ const Product =({item}) => {
         <img className="imgProduct" src={item.img}/>
         <div className="infoProduct">
             <i className='iconProduct'><FiShoppingCart/></i>
-            <i className='iconProduct'><FiSearch/></i>
+            <i className='iconProduct'>
+            <Link to={`/product/${item._id}`}><FiSearch/></Link>
+            </i>
             <i className='iconProduct'><GrFavorite/></i>
-            
-            
-            
         </div>
     </div>
   )

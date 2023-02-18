@@ -1,10 +1,14 @@
 import React from 'react';
 import "./navbar.css";
 import { FiSearch, FiShoppingCart } from 'react-icons/fi';
+import Badge from "@mui/material/Badge"
+import {useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
 
 
 const Navbar = () => {
+  const quantity = useSelector(state=>state.cart.quantity)
   return (
     <div className="container-navbar">
       <div className="wrapper-navbar">
@@ -21,11 +25,15 @@ const Navbar = () => {
       <div className='right'>
         <div className='menuItem'>REGISTER</div>
         <div className='menuItem'>SIGN IN</div>
+        <Link to="/cart">
         <div className='menuItem'>
           {/* add Shoppin card icon, of font-awesome */}
+          <Badge badgeContent={quantity} color="primary">
           <FiShoppingCart style={{ color: "gray", fontSize: 24 }}  />
+          </Badge>
           
         </div>
+        </Link>
       </div>
       </div>
     </div>

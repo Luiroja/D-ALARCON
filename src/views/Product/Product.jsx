@@ -5,6 +5,8 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import {MdAdd, MdRemove} from "react-icons/md"
 import "./product.css"
+import { addProduct } from '../../redux/cartRedux';
+import { useDispatch } from 'react-redux';
 
 const Product =() => {
 const location = useLocation();
@@ -13,6 +15,7 @@ const [product, setProduct] = useState({});
 const [subcategories, setSubcategories] = useState("");
 const [size, setSize] = useState("");
 const [quantity, setQuantity] = useState(1);
+const dispatch = useDispatch();
 
 useEffect (() => {
     const getProduct = async() => {
@@ -32,6 +35,12 @@ if(type === "decr") {
 }else {
     setQuantity(quantity +1)
 }
+}
+
+const handleClick =() => {
+    dispatch(
+        addProduct ({...product, quantity, subcategories, size})
+    )
 }
 
 
@@ -86,7 +95,7 @@ if(type === "decr") {
                         onClick = {() => handleQuantity("incr") }  
                         />
                     </div>
-                    <button className="buttonProductView">Comprar</button>
+                    <button className="buttonProductView" onClick={handleClick}>Comprar</button>
                 </div>
             </div>
         </div>

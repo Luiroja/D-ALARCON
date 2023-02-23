@@ -7,16 +7,19 @@ import Product from "./views/Product/Product";
 import Login from "./views/Login/Login";
 import Register from "./views/Register/Register";
 
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect
 } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const user = true
+
  
  const App = () => {
+  const user = useSelector((state) => state.user.currentUser);
    return (
     <Router>
       <Switch>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { popularProducts } from '../../Data'
 import Product from './Product'
 import axios from "axios"
 import "./products.css"

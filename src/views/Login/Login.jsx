@@ -29,17 +29,13 @@ const Login = () => {
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
 
-
-
   const handleClick = (e) => {
     e.preventDefault();
-    try {
-      login(dispatch, {username,password});
-    } catch (error) {
-      <MySwal/>
-    }
     
-  }
+      login(dispatch, {username,password});
+    };
+    
+
   return (
     <div className="containerLogin">
         <div className="wrapperLogin">
@@ -62,8 +58,7 @@ const Login = () => {
             disabled={isFetching}
             >INICIAR SESIÓN
             </button>
-             
-           
+           {error && <MySwal/>}
             <link rel="stylesheet" href="#"  className='linkLogin'/> ¿No recuerdas tu contraseña?
             <link rel="stylesheet" href="#" className='linkLogin'/> Crea una cuenta
             </form>

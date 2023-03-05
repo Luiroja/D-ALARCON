@@ -156,6 +156,7 @@ function ProductList() {
                   <option >15 unidades</option>
                   <option >12 unidades</option>
                   <option >8 unidades</option>
+                  <option >6 unidades</option>
                   <option >4 unidades</option>
               </select>
               </div>
@@ -171,4 +172,4 @@ function ProductList() {
      
     }
   
-export default ProductList
+export default ProductList;

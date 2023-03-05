@@ -1,7 +1,10 @@
 import React from 'react'
 import "./categories.css"
 import {Link} from "react-router-dom"
-
+import { MdReadMore } from 'react-icons/md'
+import Badge from "@mui/material/Badge";
+import { borderRadius } from '@mui/system';
+import { FiSearch } from 'react-icons/fi';
 function CategoryItem({item}) {
   return (
     
@@ -10,7 +13,9 @@ function CategoryItem({item}) {
        <img src={item.img} alt="" className='imgCategory'/>
        <div className="infoCategory">
         <h1 className="titleCategory">{item.title}</h1>
-        <button className='buttonCategory'>SHOW NOW</button>
+        <button className='buttonCategory'>
+        <FiSearch style={{ color: "gray", fontSize: 24, borderRadius:10 }}/>
+        </button>
        </div>
        </Link>
        

@@ -48,12 +48,12 @@
 }
 
 .buttonCategory {
+    border-radius: 50%;
     border:none;
     padding: 10px;
-    background-color: white;
+    background-color: #ffffff;
     color:rgb(0, 0, 0);
     cursor: pointer;
-    font-weight: 600;
 }
 /* Breackpoint to mobile view*/
 

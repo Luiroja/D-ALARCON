@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import {useLocation} from "react-router-dom"
-import { publicRequest } from "../../requests/requestMethod";
+import { publicRequest, userRequest } from "../../requests/requestMethod";
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import {MdAdd, MdRemove} from "react-icons/md"
 import "./product.css"
 import { addProduct } from '../../redux/cartRedux';
 import { useDispatch } from 'react-redux';
+
 
 const Product =() => {
 const location = useLocation();
@@ -21,7 +22,7 @@ const dispatch = useDispatch();
 useEffect (() => {
     const getProduct = async() => {
         try {
-            const res = await publicRequest.get("/products/product/" + id);
+            const res = await userRequest.get("/products/product/" + id);
             setProduct(res.data)
         } catch (error) {
             

@@ -7,19 +7,27 @@ import { MdAdd, MdRemove } from 'react-icons/md'
 import { Badge } from '@mui/material'
 import { FiShoppingCart } from 'react-icons/fi'
 import { RiDeleteBin5Fill } from "react-icons/ri"
-import { deleteProduct } from '../../redux/apiCalls'
+import { deleteProduct} from '../../redux/apiCalls'
+import { clearCart } from '../../redux/cartRedux'
 
 function Cart() {
-
     const dispatch = useDispatch();
     const cart = useSelector((state)=> state.cart)
+    console.log(cart);
+    const total = useSelector((state)=> state.cart.total)
+    console.log(total);
+
     const products = useSelector((state ) => state.cart.products)
-    const total = useSelector((state) => state.cart.total)
-
-
 
     const handleDeleteCart = (id) => {
-        deleteProduct(id, dispatch)
+    deleteProduct(id, dispatch)
+
+    }
+
+    const handleClearCart = () => {
+        dispatch(
+            clearCart({...products})
+            )
     }
 
 
@@ -38,7 +46,10 @@ function Cart() {
                     </Badge>
                     </div>
                 </div>
-                <button className="topButtonCart"> COMPRAR AHORA</button>
+                <button 
+                className="topButtonCart"
+                onClick={handleClearCart}
+                > Vaciar Carrito</button>
             </div>
             <div className="bottomCart">
                 <div className="infoCart">
@@ -91,12 +102,12 @@ function Cart() {
 
                     
                     <span className='summaryItemText'><b>SUBTOTAL</b></span>
-                    <span className='summaryItemPrice'> S/ {total}</span>
+                    <span className='summaryItemPrice'> S/ {cart.total}</span>
                 </div>
 
                 <div className="summaryItem">
                     <span className='summaryItemText'><b>TOTAL</b></span>
-                    <span className='summaryItemPrice'> S/ {total}</span>
+                    <span className='summaryItemPrice'> S/ {cart.total}</span>
                 </div>
                 <button className='buttonCheckCart'>COMPRAR AHORA</button>
                 </div>

@@ -8,7 +8,8 @@ import {Link} from "react-router-dom";
 
 
 const Navbar = () => {
-  const quantity = useSelector(state=>state.cart.quantity)
+  const cart = useSelector(state=>state.cart)
+
   return (
     <div className="container-navbar">
       <div className="wrapper-navbar">
@@ -24,7 +25,7 @@ const Navbar = () => {
         </div>
         
       <div className='right'>
-      <Badge badgeContent={quantity} color="primary">
+      <Badge badgeContent={cart.quantity} color="primary">
       <Link to ="/" >
         <div className='menuItem'>
           <FiHome style={{ color: "gray", fontSize: 24 }}/>

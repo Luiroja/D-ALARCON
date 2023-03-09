@@ -12,6 +12,7 @@ function ProductList() {
   // Solved filters 
   const location = useLocation();
   const category =location.pathname.split('/')[2];
+  console.log(category);
   const [filters, setFilters] = useState({})
  
 

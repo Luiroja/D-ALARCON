@@ -1,10 +1,8 @@
 import React from 'react'
 import "./categories.css"
 import {Link} from "react-router-dom"
-import { MdReadMore } from 'react-icons/md'
-import Badge from "@mui/material/Badge";
-import { borderRadius } from '@mui/system';
 import { FiSearch } from 'react-icons/fi';
+
 function CategoryItem({item}) {
   return (
     

@@ -4,30 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import "./login.css"
 
 
-
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-
-const MySwal = withReactContent(Swal)
-
-
-MySwal.fire({
-    icon: "error",
-    title: "Lo sentimos",
-    text: "Algo malo pasó, porfavor intentalo de nuevo",
-    
-})
-
-
-
-
-
 const Login = () => {
   // Use redux authentication
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const { isFetching, error } = useSelector((state) => state.user);
+  const { isFetching } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -58,7 +40,7 @@ const Login = () => {
             disabled={isFetching}
             >INICIAR SESIÓN
             </button>
-           {error && <MySwal/>}
+     
             <link rel="stylesheet" href="#"  className='linkLogin'/> ¿No recuerdas tu contraseña?
             <link rel="stylesheet" href="#" className='linkLogin'/> Crea una cuenta
             </form>

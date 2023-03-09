@@ -12,10 +12,11 @@ const Product =() => {
 const location = useLocation();
 const id = location.pathname.split('/')[2];
 const [product, setProduct] = useState({});
-const [subcategories, setSubcategories] = useState("");
-const [size, setSize] = useState("");
+const [events, setEvents] = useState([]);
+const [size, setSize] = useState([]);
 const [quantity, setQuantity] = useState(1);
 const dispatch = useDispatch();
+
 
 useEffect (() => {
     const getProduct = async() => {
@@ -29,22 +30,21 @@ useEffect (() => {
     getProduct();
 }, [id])
 
+
 const handleQuantity = (type) => {
 if(type === "decr") {
-    quantity >1 && setQuantity(quantity -1)
+    quantity >1 && setQuantity((quantity -1))
 }else {
-    setQuantity(quantity +1)
+    setQuantity((quantity +1))
 }
 }
+
 
 const handleClick =() => {
     dispatch(
-        addProduct ({...product, quantity, subcategories, size})
+        addProduct ({...product, quantity, events, size})
     )
 }
-
-
-
 
 
   return (
@@ -59,13 +59,13 @@ const handleClick =() => {
                 <h1 className="titleProductView">{product.title}</h1>
                 <p className="descProductView">{product.desc}</p>
                 <p>{product.ingredients && product.ingredients.join(", ")}</p>
-                <h4 className='price'> S/ {product.price}</h4>
+                <h4 className='price'> S/ {product.price* quantity}</h4>
                 <div className="filterContainer">
                   
                     <div className="filter">
                     <span className="filterTitle">Especial para:</span>
-                    <select className="selectOption" onChange={(e) => setSubcategories(e.target.value)}>
-                    {product.subcategories?.map((s)=> (
+                    <select className="selectOption" onChange={(e) => setEvents(e.target.value)}>
+                    {product.events?.map((s)=> (
                         <option key={s}>{s}</option>
                     ))}
                     </select>

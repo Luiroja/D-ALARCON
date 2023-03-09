@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from "../../components/Navbar/Navbar"
 import Footer from "../../components/Footer/Footer"
 import "./cart.css"
-import { FiMinus, FiPlus } from 'react-icons/fi'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { MdAdd, MdRemove } from 'react-icons/md'
+import { Badge } from '@mui/material'
+import { FiShoppingCart } from 'react-icons/fi'
+import { RiDeleteBin5Fill } from "react-icons/ri"
+import { deleteProduct } from '../../redux/apiCalls'
 
 function Cart() {
-const cart = useSelector((state)=> state.cart)
-const iva = cart.total *18/100
 
+    const dispatch = useDispatch();
+    const cart = useSelector((state)=> state.cart)
+    const products = useSelector((state ) => state.cart.products)
+    const total = useSelector((state) => state.cart.total)
+
+
+
+    const handleDeleteCart = (id) => {
+        deleteProduct(id, dispatch)
+    }
 
 
   return (
@@ -19,14 +31,20 @@ const iva = cart.total *18/100
             <div className="topCart">
                 <button className="topButtonCart"> AGREGAR OTRO PRODUCTO</button>
                 <div className="topTexts">
-                    <div className="topText">Agregados al carrito (2)</div>
-                    <div className="topText">Notificaciones  (0)</div>
+                
+                    <div className="topText">
+                    <Badge badgeContent={cart.quantity} color="primary">Agregados al carrito  
+                    <FiShoppingCart style={{ color: "gray", fontSize: 32 }}/>
+                    </Badge>
+                    </div>
                 </div>
                 <button className="topButtonCart"> COMPRAR AHORA</button>
             </div>
             <div className="bottomCart">
                 <div className="infoCart">
-                    {cart.products.map((product) =>(
+
+
+                    {products.map((product) =>(
 
 
             <div className="productCart">
@@ -41,11 +59,23 @@ const iva = cart.total *18/100
             </div>
             <div className="priceDetailCart">
                 <div className="priceAmountContainerCart">
-                    <FiMinus/>
-                    <div className="priceAmountCart"> {product.quantity} </div>
-                    <FiPlus/>
+                    
+                    <MdRemove className='iconContainer'
+                        />
+                            <h3 className="amount"> {product.quantity} </h3>
+
+                    <MdAdd className='iconContainer'
+                        />
                 </div>
-                <div className="productPriceCart"> S/ {product.price*product.quantity}</div>
+                <div className="productPriceCart"> S/ {product.price}</div>
+                <div className='productCartDetails'>
+                    
+                    <RiDeleteBin5Fill 
+                        onClick={handleDeleteCart} 
+                        style={{ color: "red", fontSize: 32 }}
+                     />         
+
+                </div>
             </div>
             </div>
 
@@ -54,22 +84,24 @@ const iva = cart.total *18/100
                     <hr/>
 
                 </div>
+
                 <div className="summaryCart">
-                    <h3 className='summaryTitle'> RESUMEN DE COMPRA</h3>
-                    <div className="summaryItem">
-                        <span className='summaryItemText'><b>SUBTOTAL</b></span>
-                        <span className='summaryItemPrice'> S/ {cart.total}</span>
-                    </div>
-                    <div className="summaryItem">
-                        <span className='summaryItemText'><b>IVA</b></span>
-                        <span className='summaryItemPrice'> S/ {iva}</span>
-                    </div>
-                    <div className="summaryItem">
-                        <span className='summaryItemText'><b>TOTAL</b></span>
-                        <span className='summaryItemPrice'> S/ {cart.total + iva}</span>
-                    </div>
-                    <button className='buttonCheckCart'>COMPRAR AHORA</button>
+                <h3 className='summaryTitle'> RESUMEN DE COMPRA</h3>
+                <div className="summaryItem">
+
+                    
+                    <span className='summaryItemText'><b>SUBTOTAL</b></span>
+                    <span className='summaryItemPrice'> S/ {total}</span>
                 </div>
+
+                <div className="summaryItem">
+                    <span className='summaryItemText'><b>TOTAL</b></span>
+                    <span className='summaryItemPrice'> S/ {total}</span>
+                </div>
+                <button className='buttonCheckCart'>COMPRAR AHORA</button>
+                </div>
+               
+                
 
             </div>
         </div>

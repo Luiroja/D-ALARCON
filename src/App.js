@@ -6,6 +6,7 @@ import Cart from "./views/Cart/Cart";
 import Product from "./views/Product/Product";
 import Login from "./views/Login/Login";
 import Register from "./views/Register/Register";
+import Payment from './views/Payment/Payment';
 
 
 import {
@@ -34,6 +35,9 @@ import { useSelector } from "react-redux";
         </Route>
         <Route path ="/cart">
           <Cart/>
+        </Route>
+        <Route path ="/payment">
+          <Payment/>
         </Route>
         <Route path="/login">
           {user? <Redirect to="/"/>:<Login />}

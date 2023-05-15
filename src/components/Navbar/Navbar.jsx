@@ -4,11 +4,12 @@ import { FiSearch, FiShoppingCart, FiLogIn, FiUserPlus, FiHome } from 'react-ico
 import Badge from "@mui/material/Badge";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
+import { cartQuantitySelector } from '../../redux/cartRedux'
 
 
 
 const Navbar = () => {
-  const cart = useSelector(state=>state.cart)
+  const cartQuantity= useSelector( cartQuantitySelector);
 
   return (
     <div className="container-navbar">
@@ -25,7 +26,7 @@ const Navbar = () => {
         </div>
         
       <div className='right'>
-      <Badge badgeContent={cart.quantity} color="primary">
+      <Badge badgeContent={cartQuantity} color="primary">
       <Link to ="/" >
         <div className='menuItem'>
           <FiHome style={{ color: "gray", fontSize: 24 }}/>

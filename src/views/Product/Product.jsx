@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {useLocation} from "react-router-dom"
-import { publicRequest, userRequest } from "../../requests/requestMethod";
+import { userRequest } from "../../requests/requestMethod";
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import {MdAdd, MdRemove} from "react-icons/md"

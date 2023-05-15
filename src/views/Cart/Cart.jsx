@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from "../../components/Navbar/Navbar"
 import Footer from "../../components/Footer/Footer"
 import "./cart.css"
 import { useDispatch, useSelector } from 'react-redux'
+import { cartQuantitySelector, cartTotalSelector } from '../../redux/cartRedux'
 import { MdAdd, MdRemove } from 'react-icons/md'
 import { Badge } from '@mui/material'
 import { FiShoppingCart } from 'react-icons/fi'
@@ -12,16 +13,15 @@ import { clearCart } from '../../redux/cartRedux'
 
 function Cart() {
     const dispatch = useDispatch();
-    const cart = useSelector((state)=> state.cart)
-    console.log(cart);
-    const total = useSelector((state)=> state.cart.total)
-    console.log(total);
-
+    const cartQuantity= useSelector( cartQuantitySelector);
+    const cartTotal = useSelector( cartTotalSelector);
+    
+   
     const products = useSelector((state ) => state.cart.products)
-
+    
+    
     const handleDeleteCart = (id) => {
     deleteProduct(id, dispatch)
-
     }
 
     const handleClearCart = () => {
@@ -41,7 +41,7 @@ function Cart() {
                 <div className="topTexts">
                 
                     <div className="topText">
-                    <Badge badgeContent={cart.quantity} color="primary">Agregados al carrito  
+                    <Badge badgeContent={cartQuantity} color="primary">Agregados al carrito  
                     <FiShoppingCart style={{ color: "gray", fontSize: 32 }}/>
                     </Badge>
                     </div>
@@ -53,7 +53,6 @@ function Cart() {
             </div>
             <div className="bottomCart">
                 <div className="infoCart">
-
 
                     {products.map((product) =>(
 
@@ -102,12 +101,12 @@ function Cart() {
 
                     
                     <span className='summaryItemText'><b>SUBTOTAL</b></span>
-                    <span className='summaryItemPrice'> S/ {cart.total}</span>
+                    <span className='summaryItemPrice'> S/ {cartTotal}</span>
                 </div>
 
                 <div className="summaryItem">
                     <span className='summaryItemText'><b>TOTAL</b></span>
-                    <span className='summaryItemPrice'> S/ {cart.total}</span>
+                    <span className='summaryItemPrice'> S/ {cartTotal}</span>
                 </div>
                 <button className='buttonCheckCart'>COMPRAR AHORA</button>
                 </div>

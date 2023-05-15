@@ -29,16 +29,3 @@ export const deleteProduct = async (id, dispatch) => {
     dispatch(deleteProductFailure());
   }
 };
-
-
-
-// export const deleteCart = async (dispatch, id) => {
-//   dispatch(deleteCartStart());
-//   try {
-//     const res = await publicRequest.delete("/carts/" +  id )
-//     dispatch(deleteCartSuccess(res.data));
-//     console.log(res.data);
-//   } catch (error) {
-//     dispatch(deleteCartFailure())
-//   }
-// }
